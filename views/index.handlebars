@@ -1,0 +1,71 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-12">
+      <h1 class="text-center jumbotron"><span class="glyphicon glyphicon-cutlery"></span>Eat-N-Out Burger</h1>
+    </div>
+  
+  <!-- end second row -->
+  </div>
+</div>
+
+<div class="container main">
+  <div class="row wrapper">
+
+    <div class="col-md-6 right-half">
+      <h3>Eat me</h3>
+      <ul>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            <li>
+              <h5>{{this.id}}. {{this.burger_name}}
+                <form action='burgers/updateOne/{{this.id}}?_method=PUT' method='POST'>
+                  <input type='hidden' name='devoured' value='true'>
+                  <button type='submit' class="btn btn-danger">Devour it!</button>
+                </form>
+              </h5>
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    
+
+    <div class="col-md-6 left-half">
+      <h3>Devoured</h3>
+      <ul>
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <li>
+              <h5 class="text-muted">{{this.id}}. {{this.burger_name}}</h5>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
+  <!-- end third row -->
+  </div>
+</div>
+
+  <br><br><br><br>
+
+  <div class="row">
+
+    <div class="col-md-12 text-center">
+      <form class="create-update-form" action="burgers/insertOne" method="POST">
+        <div class="form-group">
+          <!-- <label for="bg">Burger Name:</label> -->
+          <textarea type="text" name="name"></textarea><br>
+          <button class="btn btn-info" type="submit">Order</button>
+          <h5 class="text-center">Please enter a burger that you like!</h5>
+        </div>
+      </form>
+    </div>
+
+  <!-- end fourth row -->
+  </div>
+
+<!-- end bootstrap container -->

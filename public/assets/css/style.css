@@ -1,0 +1,58 @@
+
+body {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-shadow: 0 2px 2px #b6701e;
+  background-image: url(http://www.in-n-out.com/ino-images/default-source/employment/employment_slideshow3.png?sfvrsn=0);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.main {
+  display: grid;
+  text-align: center;
+}
+
+.left-half {
+  /*text-align: center;*/
+  /*background: #ff9e2c;*/
+  grid-column: 2;
+}
+
+.right-half {
+  /*text-align: center;*/
+  /*background: #b6701e;*/
+  grid-column: 2;
+}
+
+.jumbotron {
+    opacity: .80;
+    margin-top: 20px;
+    background: #6F263D;
+    color: white;
+}
+.wrapper {
+  background: black;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: .50;
+}
+
+li {
+  list-style: none;
+}
+
+h5 {
+  text-align: center;
+}
+.btn {
+  margin-top: 10px;
+}
+h3 {
+  margin-left: 45px;
+}
